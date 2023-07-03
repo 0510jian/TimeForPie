@@ -19,7 +19,7 @@ def countDown() :
 
     if pause is False :
         draw()
-        sec -= 2
+        sec -= 0.1
         window.after(1000, countDown)
 
 
