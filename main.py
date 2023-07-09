@@ -1,6 +1,10 @@
 import tkinter as tk
+import winsound
 
 # 타이머 그리기
+import winsound
+
+
 def draw() :
     global sec
     global color
@@ -20,6 +24,9 @@ def countDown() :
     if pause is False :
         draw()
         sec -= 0.1
+        if(sec < 0) :
+            btnReset()
+            winsound.PlaySound('alarm.wav', winsound.SND_FILENAME)
         window.after(1000, countDown)
 
 
